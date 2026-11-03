@@ -1,1 +1,354 @@
 # Banking-Management-System
+<p align="center">
+<img src="https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C Language">{=html}
+<img src="https://img.shields.io/badge/Build-Makefile-2E8B57?style=for-the-badge&logo=gnu&logoColor=white" alt="Makefile">{=html}
+<img src="https://img.shields.io/badge/Platform-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">{=html}
+<img src="https://img.shields.io/badge/Project-Banking%20System-D4AF37?style=for-the-badge" alt="Banking System">{=html}
+</p>
+<h1 align="center">
+🏦 Banking Management System
+</h1>
+<p align="center">
+A menu-driven Banking Management System developed using C programming.
+<br>{=html} Manage bank accounts, deposits, withdrawals, balance
+enquiries, money transfers, transaction history, and account records
+using file handling.
+</p>
+📌 About the Project
+The Banking Management System is a console-based C project that
+performs basic banking operations. It uses structures, functions,
+pointers, linked-list-based account management, modular source files,
+and file handling to store and retrieve account information.
+
+This project was developed as a practical way to learn and apply C
+programming concepts.
+✨ Features
+   Option  Operation             Description
+`c`    Create Account        Create a new bank account
+`p`    Display Accounts      Display all available accounts
+`s`    Search Account        Search using an account number
+`d`    Deposit               Deposit money into an account
+`w`    Withdraw              Withdraw money from an account
+`b`    Balance Enquiry       Check the available account balance
+`t`    Money Transfer        Transfer money between two accounts
+`h`    Transaction History   View account transaction records
+`r`    Save Information      Save account information to a file
+`l`    Load Accounts         Load saved account information
+`e`    Exit                  Terminate the application
+🔄 Project Flow
+```mermaid
+flowchart TD
+    A(["🏦 Banking Management System"]) --> B["Display Main Menu"]
+    B --> C{"Select an Option"}
+    C --> D["Create Account"]
+    C --> E["Display / Search Account"]
+    C --> F["Deposit / Withdraw"]
+    C --> G["Balance Enquiry"]
+    C --> H["Money Transfer"]
+    C --> I["Transaction History"]
+    C --> J["Save / Load Account Data"]
+    D --> K[("Account File")]
+    E --> K
+    F --> K
+    G --> K
+    H --> K
+    I --> L["Transaction Records"]
+    L --> K
+    J --> K
+    K --> B
+    C --> M(["Exit Application"])
+```
+🧰 Technologies and Concepts
+- C Programming
+- Structures and pointers
+- Functions and modular programming
+- Linked lists
+- File handling
+- Makefile and separate compilation
+📁 Project Structure
+Banking-Management-System/
+│
+├── account.c          # Account-related operations
+├── main.c             # Main function and menu
+├── transaction.c      # Transaction-related operations
+├── banking.h          # Structures and function declarations
+├── makefile           # Build instructions
+└── README.md          # Project documentation
+The program may create an account data file when account information is
+saved. Do not upload real or sensitive personal banking information.
+⚙️ Build and Run
+1. Clone the repository
+git clone https://github.com/YOUR_USERNAME/Banking-Management-System.git
+cd Banking-Management-System
+Replace YOUR_USERNAME with your GitHub username.
+2. Compile using Make
+Run this command in the project directory:
+make
+The Makefile builds the object files and links them into a.out. The
+build commands are:
+a.out : account.o main.o transaction.o
+    cc account.o main.o transaction.o -o a.out
+
+account.o : account.c
+    cc -c account.c
+
+main.o : main.c
+    cc -c main.c
+
+transaction.o : transaction.c
+    cc -c transaction.c
+3. Run the application
+./a.out
+4. Compile manually (alternative)
+cc -c account.c
+cc -c main.c
+cc -c transaction.c
+cc account.o main.o transaction.o -o a.out
+🖥️ Sample Output
+The following sample is based on a test run of the project. The main
+menu is shown once at the beginning; after that, each operation is
+selected using enter the choice:.
+1. Main Menu and Account Creation
+c .createAccount
+p .display
+s .search
+d .deposite
+w .withdraw
+b .balance_enquiry
+t .transfer
+h .transaction_history
+l .loadAccount
+r .saveinformation
+e .exit
+
+enter the choice: c
+
+-------- CREATE NEW ACCOUNT --------
+enter the name: Arti
+enter the Account number: 123
+enter the contact No: 9324747347
+enter the balance: 10000
+
+enter the choice: c
+
+-------- CREATE NEW ACCOUNT --------
+enter the name: Monika
+enter the Account number: 992
+enter the contact No: 9208274890
+enter the balance: 20000
+
+enter the choice: c
+
+-------- CREATE NEW ACCOUNT --------
+enter the name: Shrutika
+enter the Account number: 923
+enter the contact No: 9373929323
+enter the balance: 30000
+
+enter the choice: c
+
+-------- CREATE NEW ACCOUNT --------
+enter the name: Tanvi
+enter the Account number: 564
+enter the contact No: 3478940344
+enter the balance: 900
+
+enter the choice: c
+
+-------- CREATE NEW ACCOUNT --------
+enter the name: Sakshi
+enter the Account number: 892
+enter the contact No: 0982349382
+enter the balance: 15000
+
+enter the choice: c
+
+-------- CREATE NEW ACCOUNT --------
+enter the name: Tanuja
+enter the Account number: 234
+enter the contact No: 9320744334
+enter the balance: 4000
+2. Display All Accounts
+enter the choice: p
+
+-------- DISPLAY BANK INFORMATION --------
+Tanuja     234     9320744334     4000.000000
+Sakshi     892     0982349382     15000.000000
+Tanvi      564     3478940344     900.000000
+Shrutika   923     9373929323     30000.000000
+Monika     992     9208274890     20000.000000
+Arti       123     9324747347     10000.000000
+3. Search Account
+enter the choice: s
+
+-------- SEARCH ACCOUNT --------
+enter the account: 564
+Tanvi 564 3478940344 900.000000
+4. Deposit Money
+enter the choice: d
+
+-------- DEPOSITE AMMOUNT --------
+-------- SEARCH ACCOUNT --------
+enter the account: 564
+Tanvi 564 3478940344 900.000000
+enter the new balance: 1000
+Upadted Balance:1900.00
+5. Withdraw Money
+enter the choice: w
+
+-------- WITHDRAW MONEY --------
+-------- SEARCH ACCOUNT --------
+enter the account: 923
+Shrutika 923 9373929323 30000.000000
+enter the new Ammount: 1000
+remaining balance:29000.00
+6. Balance Enquiry
+enter the choice: b
+
+-------- BALANCE ENQUIRY--------
+-------- SEARCH ACCOUNT --------
+enter the account: 234
+Tanuja 234 9320744334 4000.000000
+Available balanc:4000.000000
+7. Money Transfer
+enter the choice: t
+
+-------- TRANSFER MONEY --------
+enter the sender account no:
+-------- SEARCH ACCOUNT --------
+enter the account: 992
+Monika 992 9208274890 20000.000000
+enter the receiver account no:
+-------- SEARCH ACCOUNT --------
+enter the account: 123
+Arti 123 9324747347 10000.000000
+enter the ammount: 2000
+
+enter the choice: p
+
+-------- DISPLAY BANK INFORMATION --------
+Tanuja     234     9320744334     4000.000000
+Sakshi     892     0982349382     15000.000000
+Tanvi      564     3478940344     1900.000000
+Shrutika   923     9373929323     29000.000000
+Monika     992     9208274890     18000.000000
+Arti       123     9324747347     12000.000000
+Second transfer:
+enter the choice: t
+
+-------- TRANSFER MONEY --------
+enter the sender account no:
+-------- SEARCH ACCOUNT --------
+enter the account: 892
+Sakshi 892 0982349382 15000.000000
+enter the receiver account no:
+-------- SEARCH ACCOUNT --------
+enter the account: 234
+Tanuja 234 9320744334 4000.000000
+enter the ammount: 1000
+
+enter the choice: p
+
+-------- DISPLAY BANK INFORMATION --------
+Tanuja     234     9320744334     5000.000000
+Sakshi     892     0982349382     14000.000000
+Tanvi      564     3478940344     1900.000000
+Shrutika   923     9373929323     29000.000000
+Monika     992     9208274890     18000.000000
+Arti       123     9324747347     12000.000000
+8. Transaction History
+enter the choice: h
+
+-------- SEARCH ACCOUNT --------
+enter the account: 123
+Arti 123 9324747347 12000.000000
+-------- TRANSACTION HISTORY --------
+1       TRANSFER IN     2000.00
+
+enter the choice: h
+
+-------- SEARCH ACCOUNT --------
+enter the account: 234
+Tanuja 234 9320744334 5000.000000
+-------- TRANSACTION HISTORY --------
+1       TRANSFER IN     1000.00
+
+enter the choice: h
+
+-------- SEARCH ACCOUNT --------
+enter the account: 892
+Sakshi 892 0982349382 14000.000000
+-------- TRANSACTION HISTORY --------
+1       TRANSFER OUT    1000.00
+
+enter the choice: h
+
+-------- SEARCH ACCOUNT --------
+enter the account: 564
+Tanvi 564 3478940344 1900.000000
+-------- TRANSACTION HISTORY --------
+1       DEPOSITE        1000.00
+
+enter the choice: h
+
+-------- SEARCH ACCOUNT --------
+enter the account: 923
+Shrutika 923 9373929323 29000.000000
+-------- TRANSACTION HISTORY --------
+1       WITHDRAW        1000.00
+
+enter the choice: h
+
+-------- SEARCH ACCOUNT --------
+enter the account: 992
+Monika 992 9208274890 18000.000000
+-------- TRANSACTION HISTORY --------
+1       TRANSFER OUT    2000.00
+9. Save Account Information
+enter the choice: r
+store information successfully...
+10. Load Account Information
+enter the choice: l
+Accounts loaded successfully!
+11. Display Accounts After Loading
+enter the choice: p
+
+-------- DISPLAY BANK INFORMATION --------
+Tanuja     234     9320744334     5000.000000
+Sakshi     892     0982349382     14000.000000
+Tanvi      564     3478940344     1900.000000
+Shrutika   923     9373929323     29000.000000
+Monika     992     9208274890     18000.000000
+Arti       123     9324747347     12000.000000
+12. Exit Application
+enter the choice: e
+
+Thank you for using the Banking Management System!
+Your session has been terminated successfully.
+🎓 Learning Outcomes
+While developing this project, I practised:
+- Writing modular C programs using multiple source files
+- Using structures and pointers
+- Managing records with linked lists
+- Performing file operations to save and load account data
+- Implementing basic banking transactions
+- Compiling a multi-file C project using Makefile
+🔮 Future Enhancements
+- Add user authentication and password protection
+- Improve input validation and error handling
+- Add more detailed transaction reports
+- Integrate a database
+- Develop a graphical user interface
+⚠️ Disclaimer
+This project is intended for educational purposes only. It is not a real
+banking application. Do not use real personal, financial, or banking
+information with this program.
+👨‍💻 Author
+Your Name
+
+C Programming Student | Aspiring Software Developer
+<p align="center">
+<b>{=html}⭐ If you find this project useful, consider giving it a
+star!`</b>`{=html} <br>{=html}`
+`{=html} Made with ❤️ using C
+</p>
