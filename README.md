@@ -77,11 +77,7 @@ Banking-Management-System/
 The program may create an account data file when account information is
 saved. Do not upload real or sensitive personal banking information.
 ⚙️ Build and Run
-1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/Banking-Management-System.git
-cd Banking-Management-System
-Replace YOUR_USERNAME with your GitHub username.
-2. Compile using Make
+1. Compile using Make
 Run this command in the project directory:
 make
 The Makefile builds the object files and links them into a.out. The
@@ -97,7 +93,7 @@ main.o : main.c
 
 transaction.o : transaction.c
     cc -c transaction.c
-3. Run the application
+2. Run the application
 ./a.out
 4. Compile manually (alternative)
 cc -c account.c
