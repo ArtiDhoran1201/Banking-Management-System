@@ -1,19 +1,13 @@
-# Banking-Management-System
+<h1 align="center">
+🏦 Banking Management System
+</h1>
 <p align="center">
 <img src="https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C Language">
 <img src="https://img.shields.io/badge/Build-Makefile-2E8B57?style=for-the-badge&logo=gnu&logoColor=white" alt="Makefile">
 <img src="https://img.shields.io/badge/Platform-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
 <img src="https://img.shields.io/badge/Project-Banking%20System-D4AF37?style=for-the-badge" alt="Banking System">
 </p>
-<h1 align="center">
-🏦 Banking Management System
-</h1>
-<p align="center">
-A menu-driven Banking Management System developed using C programming.
-<br>{=html} Manage bank accounts, deposits, withdrawals, balance
-enquiries, money transfers, transaction history, and account records
-using file handling.
-</p>
+
 📌 About the Project
 The Banking Management System is a console-based C project that
 performs basic banking operations. It uses structures, functions,
@@ -449,12 +443,7 @@ The following features can be added in future versions:
 10. **Input Validation:** Improve validation for account numbers, contact numbers, and transaction amounts.
 11. **Improved File Handling:** Make account data storage and retrieval more robust.
 12. **User-Friendly Interface:** Develop a graphical user interface (GUI).
-
-## 👨‍💻 Author
-
-**Your Name**
-
 ## ⚠️ Disclaimer
 
-This project is developed for educational purposes as a C programming project. It is a basic banking simulation and is not intended for real financial transactions.
+This project is developed for Learning purposes as a C programming project. It is a basic banking simulation and is not intended for real financial transactions.
 
