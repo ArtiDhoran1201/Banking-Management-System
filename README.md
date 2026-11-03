@@ -116,7 +116,55 @@ h .transaction_history
 l .loadAccount
 r .saveinformation
 e .exit
+c .createAccount p .display s .search d .deposite w .withdraw b .balance_enquiry t .transfer h .transaction_history l .loadAccount r .saveinformation e .exit
 
+enter the choice: c
+
+-------- CREATE NEW ACCOUNT --------
+enter the name: Arti
+enter the Account number: 123
+enter the contact No: 9324747347
+enter the balance: 10000
+
+enter the choice: c
+
+-------- CREATE NEW ACCOUNT --------
+enter the name: Monika
+enter the Account number: 992
+enter the contact No: 9208274890
+enter the balance: 20000
+
+enter the choice: c
+
+-------- CREATE NEW ACCOUNT --------
+enter the name: Shrutika
+enter the Account number: 923
+enter the contact No: 9373929323
+enter the balance: 30000
+
+enter the choice: c
+
+-------- CREATE NEW ACCOUNT --------
+enter the name: Tanvi
+enter the Account number: 564
+enter the contact No: 3478940344
+enter the balance: 900
+
+enter the choice: c
+
+-------- CREATE NEW ACCOUNT --------
+enter the name: Sakshi
+enter the Account number: 892
+enter the contact No: 0982349382
+enter the balance: 15000
+
+enter the choice: c
+
+-------- CREATE NEW ACCOUNT --------
+enter the name: Tanuja
+enter the Account number: 234
+enter the contact No: 9320744334
+enter the balance: 4000
 enter the choice: c
 
 -------- CREATE NEW ACCOUNT --------
